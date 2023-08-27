@@ -19,7 +19,7 @@ extension UIStackView {
             let titleAttr = title.createAttributedString(fontSize: fontSize,
                                                          isBold: true,
                                                          alignment: .left,
-                                                         color: .darkGray)
+                                                         color: .black)
             
             let valueAttr = value.createAttributedString(fontSize: fontSize,
                                                          isBold: false,
