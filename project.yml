@@ -25,10 +25,6 @@ targets:
       path: ./Sources/Info.plist 
       properties:
         UILaunchStoryboardName: "LaunchScreen"
-#        UIAppFonts:
-#            - "Golos-UI_Bold.ttf"
-#            - "Golos-UI_Medium.ttf"
-#            - "Golos-UI_Regular.ttf"
         UISupportedInterfaceOrientations:
           - "UIInterfaceOrientationPortrait"
         UISupportedInterfaceOrientations~ipad:
