@@ -1,0 +1,51 @@
+name: StarWarsApp
+
+targets:
+
+  StarWarsApp:
+    scheme:
+      testTargets:
+        - StarWarsAppUnitTests
+    
+    type: application
+    platform: iOS
+    deploymentTarget: 16.0
+    
+    sources:
+      - path: ./Sources
+        name: Sources
+      - path: ./Assets
+        name: Assets
+        
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: starwars.app
+
+    info:
+      path: ./Sources/Info.plist 
+      properties:
+        UILaunchStoryboardName: "LaunchScreen"
+#        UIAppFonts:
+#            - "Golos-UI_Bold.ttf"
+#            - "Golos-UI_Medium.ttf"
+#            - "Golos-UI_Regular.ttf"
+        UISupportedInterfaceOrientations:
+          - "UIInterfaceOrientationPortrait"
+        UISupportedInterfaceOrientations~ipad:
+          - "UIInterfaceOrientationPortrait"
+        CFBundleIdentifier: "$(PRODUCT_BUNDLE_IDENTIFIER)"
+        CFBundleName: "$(PRODUCT_NAME)"
+        CFBundleVersion: "1.0.0"
+        CFBundleShortVersionString: "1.0.0"
+        UIUserInterfaceStyle: "Light"
+        
+  StarWarsAppUnitTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ./Tests
+    dependencies:
+      - target: StarWarsApp
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
